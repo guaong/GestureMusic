@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_music_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.guaong.gesturemusic.activity.MusicActivity">
+
+    <io.guaong.gesturemusic.component.WaterWaveView
+        android:id="@+id/a_music_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b04e64" />
+
+    <RelativeLayout
+        android:id="@+id/a_music_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.guaong.gesturemusic.component.PlayButton
+            android:layout_marginTop="60dp"
+            android:id="@+id/a_music_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="#00000000" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/a_music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/a_music_btn"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/a_music_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/a_music_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <io.guaong.gesturemusic.component.OneToThreeButtonGroup
+            android:background="#00000000"
+            android:layout_below="@+id/a_music_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <io.guaong.gesturemusic.component.MenuButton
+                android:id="@+id/a_music_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <io.guaong.gesturemusic.component.ListButton
+                android:visibility="invisible"
+                android:id="@+id/a_music_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <io.guaong.gesturemusic.component.OrderButton
+                android:visibility="invisible"
+                android:id="@+id/a_music_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <io.guaong.gesturemusic.component.TimingButton
+                android:visibility="invisible"
+                android:id="@+id/a_music_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </io.guaong.gesturemusic.component.OneToThreeButtonGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#4aa9aa"
+        android:id="@+id/a_music_list_layout"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/a_music_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Music</string>
+    <string name="error">No Local Music</string>
+    <string name="hint_one">Sorry</string>
+    <string name="hint_two">please open read external storage permission</string>
+    <string name="hint_three">thank you :-)</string>
+</resources>
